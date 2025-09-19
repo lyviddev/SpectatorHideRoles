@@ -15,5 +15,5 @@ If there is any issues with the plugin, please let me know in the EXILED Discord
 ## Plans:
 - Might make it more customizable for hiding roles
 - I could probably make it so that any event SCP's wont be shown (like the Flamingo's)
-- 
+
 I could also make it so that more roles besides SCP's and Tutorial can be hidden from the Spectators or not. But I am also not sure. Tell me if its a good idea or not in the EXILED Discord Server!
