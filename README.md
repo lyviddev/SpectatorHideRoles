@@ -7,7 +7,7 @@
 My first plugin for SCP SL! :D
 
 It was honestly not hard to make it. But I do see how useful this plugin can be in servers.
-Currently there is only LabAPI release, but I will be working on an EXILED version for all the EXILED server owners
+I made both LabAPI and EXILED versions of the plugin!
 
 If there is any issues with the plugin, please let me know in the EXILED Discord server! I will try to fix them as best as I can!
 
