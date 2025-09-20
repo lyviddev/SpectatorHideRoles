@@ -1,7 +1,7 @@
 | Config Name            | Type     | Default Value                                            |
 |------------------------|----------|----------------------------------------------------------|
-| hide_s_c_p_spectate    | Boolean  | `true`                                                   |
-| hide_tutorial_spectate | Boolean  | `false`                                                  |
+| hide_scp               | Boolean  | `true`                                                   |
+| hide_tutorial          | Boolean  | `false`                                                  |
 
 ## Note:
 My first plugin for SCP SL! :D
