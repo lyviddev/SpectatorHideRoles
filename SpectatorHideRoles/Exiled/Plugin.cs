@@ -1,0 +1,27 @@
+using System;
+
+namespace SpectatorHideRoles;
+using Exiled.API.Features;
+using player = Exiled.Events.Handlers.Player;
+using customRoles = Exiled.CustomRoles.API.Features;
+
+public class Plugin : Plugin<Config> {
+    public override string Name => "SpectatorHideRoles";
+    public override string Author => "Lyvid_Dev";
+    public override Version RequiredExiledVersion => new(9, 9, 2);
+    public override Version Version => new(1, 1, 0);
+    
+    public static Plugin Singleton;
+
+    public override void OnEnabled() {
+        Singleton = this;
+        player.ChangingRole += EventHandlers.ChangingRole.OnChangingRole;
+        base.OnEnabled();
+    }
+
+    public override void OnDisabled() {
+        Singleton = null;
+        player.ChangingRole -= EventHandlers.ChangingRole.OnChangingRole;
+        base.OnDisabled();
+    }
+}
