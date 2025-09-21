@@ -1,7 +1,6 @@
-| Config Name            | Type     | Default Value                                            |
-|------------------------|----------|----------------------------------------------------------|
-| hide_scp               | Boolean  | `true`                                                   |
-| hide_tutorial          | Boolean  | `false`                                                  |
+| Config Name               | Type       | Default Value                            |
+|---------------------------|------------|------------------------------------------|
+| hide_roles                | String[]   | `- Tutorial`                             |
 
 ## Note:
 My first plugin for SCP SL! :D
@@ -13,7 +12,5 @@ If there is any issues with the plugin, please let me know in the EXILED Discord
 
 
 ## Plans:
-- Might make it more customizable for hiding roles
-- I could probably make it so that any event SCP's wont be shown (like the Flamingo's)
-
-I could also make it so that more roles besides SCP's and Tutorial can be hidden from the Spectators or not. But I am also not sure. Tell me if its a good idea or not in the EXILED Discord Server!
+- Making it so that a list of what SCP's there are and their health will appear for spectators as a list
+- Might make the Gramophone temporarily allowing Spectators to view SCP's until the Gramophone is on cooldown/done
