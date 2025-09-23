@@ -7,9 +7,13 @@ namespace SpectatorHideRoles;
 public sealed class Config : IConfig {
     public bool Debug { get; set; } = false;
     public bool IsEnabled { get; set; } = true;
+    public List<RoleTypeId> HideRoles { get; set; } = new()
+    {
+        RoleTypeId.Tutorial,
+    };
 
-    public bool SeparateCustomRoles { get; set; } = false;
-    public string[] HideRoles { get; set; } = {"Tutorial"};
-
-    public string[] HideCustomRoles { get; set; } = { };
+    public List<string> HideCustomRoles { get; set; } = new()
+    {
+        "Serpents Hand Guardian",
+    };
 }

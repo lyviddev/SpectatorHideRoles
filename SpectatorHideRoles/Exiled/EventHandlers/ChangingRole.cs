@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using Exiled.CustomRoles.API;
 using Exiled.CustomRoles.API.Features;
 using Exiled.Events.EventArgs.Player;
@@ -13,15 +14,11 @@ public static class ChangingRole {
 
         Timing.CallDelayed(0.1f, () => {
             foreach (var roleName in Plugin.Singleton.Config.HideRoles) {
-                if (Enum.TryParse<RoleTypeId>(roleName, out var roleType) && ev.NewRole == roleType) {
-                    if (Plugin.Singleton.Config.SeparateCustomRoles && !ev.Player.HasAnyCustomRole() || !Plugin.Singleton.Config.SeparateCustomRoles) { showSpectate = false; }
-                
-                    else if (Plugin.Singleton.Config.SeparateCustomRoles && ev.Player.HasAnyCustomRole()) {
-                        foreach (var customRoleName in Plugin.Singleton.Config.HideCustomRoles) {
-                            if (CustomRole.TryGet(customRoleName, out _)) { showSpectate = false; }
-                        }
-                    }
-                }
+                if (ev.NewRole == roleName) 
+                    showSpectate = false;
+                else if (!Plugin.Singleton.Config.HideCustomRoles.IsEmpty() && ev.Player.HasAnyCustomRole())
+                    foreach (var customRole in Plugin.Singleton.Config.HideCustomRoles.Where(customRole => CustomRole.TryGet(customRole, out var _)))
+                        showSpectate = false;
             }
             
             ev.Player.IsSpectatable = showSpectate;
