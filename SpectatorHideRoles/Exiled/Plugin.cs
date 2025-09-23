@@ -10,7 +10,7 @@ public class Plugin : Plugin<Config> {
     public override string Name => "SpectatorHideRoles";
     public override string Author => "Lyvid_Dev";
     public override Version RequiredExiledVersion => new(9, 9, 2);
-    public override Version Version => new(1, 1, 1);
+    public override Version Version => new(1, 2, 0);
 
     // public override string Prefix { get; } => "Some Random Thing";
 
@@ -18,13 +18,13 @@ public class Plugin : Plugin<Config> {
 
     public override void OnEnabled() {
         Singleton = this;
-        player.ChangingRole += EventHandlers.ChangingRole.OnChangingRole;
+        player.Spawned += EventHandlers.ChangingRole.OnSpawned;
         base.OnEnabled();
     }
 
     public override void OnDisabled() {
         Singleton = null;
-        player.ChangingRole -= EventHandlers.ChangingRole.OnChangingRole;
+        player.Spawned -= EventHandlers.ChangingRole.OnSpawned;
         base.OnDisabled();
     }
 }

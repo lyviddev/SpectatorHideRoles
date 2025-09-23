@@ -9,19 +9,16 @@ using PlayerRoles;
 namespace SpectatorHideRoles.EventHandlers;
 
 public static class ChangingRole {
-    public static void OnChangingRole(ChangingRoleEventArgs ev) {
+    public static void OnSpawned(SpawnedEventArgs ev) {
         bool showSpectate = true;
-
-        Timing.CallDelayed(0.1f, () => {
-            foreach (var roleName in Plugin.Singleton.Config.HideRoles) {
-                if (ev.NewRole == roleName) 
+        foreach (var roleName in Plugin.Singleton.Config.HideRoles) {
+            showSpectate = true;
+            if (ev.Player.Role == roleName) 
+                showSpectate = false;
+            else if (!Plugin.Singleton.Config.HideCustomRoles.IsEmpty() && ev.Player.HasAnyCustomRole())
+                foreach (var customRole in Plugin.Singleton.Config.HideCustomRoles.Where(customRole => CustomRole.TryGet(customRole, out var _)))
                     showSpectate = false;
-                else if (!Plugin.Singleton.Config.HideCustomRoles.IsEmpty() && ev.Player.HasAnyCustomRole())
-                    foreach (var customRole in Plugin.Singleton.Config.HideCustomRoles.Where(customRole => CustomRole.TryGet(customRole, out var _)))
-                        showSpectate = false;
-            }
-            
-            ev.Player.IsSpectatable = showSpectate;
-        });
+        }
+        ev.Player.IsSpectatable = showSpectate;
     }
 }
