@@ -1,6 +1,8 @@
-| Config Name               | Type       | Default Value                            |
-|---------------------------|------------|------------------------------------------|
-| hide_roles                | String[]   | `- Tutorial`                             |
+| Config Name                    | Type       | Default Value                            |
+|--------------------------------|------------|------------------------------------------|
+| separate_custom_roles (EXILED) | Bool       | `false`                                  |
+| hide_roles                     | String[]   | `- Tutorial`                             |
+| hide_custom_roles     (EXILED) | String[]   | `- Tutorial`                             |
 
 ## Note:
 My first plugin for SCP SL! :D
