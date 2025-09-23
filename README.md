@@ -2,7 +2,7 @@
 |--------------------------------|------------|------------------------------------------|
 | separate_custom_roles (EXILED) | Bool       | `false`                                  |
 | hide_roles                     | String[]   | `- Tutorial`                             |
-| hide_custom_roles     (EXILED) | String[]   | `[]`                             |
+| hide_custom_roles     (EXILED) | String[]   | `[]`                                     |
 
 ## Note:
 My first plugin for SCP SL! :D
@@ -16,3 +16,7 @@ If there is any issues with the plugin, please let me know in the EXILED Discord
 ## Plans:
 - Making it so that a list of what SCP's there are and their health will appear for spectators as a list
 - Might make the Gramophone temporarily allowing Spectators to view SCP's until the Gramophone is on cooldown/done
+
+
+## Credit: 
+Thank you to Snivy and Yamato for helping out and making changes to the plugin!
