@@ -4,6 +4,8 @@
 | hide_roles                     | RoleTypeId[] | `- Tutorial`                             |
 | hide_custom_roles     (EXILED) | String[]     | `- 'Serpents Hand Guardian'`             |
 
+List of Roles: https://exmod-team.github.io/EXILED/articles/SCPSLRessources/NW_Documentation.html#roletype-team-side-and-leadingteam
+
 
 ## Note:
 My first plugin for SCP SL! :D
