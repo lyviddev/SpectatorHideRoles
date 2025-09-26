@@ -25,7 +25,7 @@ public class Plugin : Plugin<Config> {
     public override void OnEnabled() {
         Singleton = this;
         player.Spawned += EventHandlers.ChangingRole.OnSpawned;
-        base.OnEnabled();
+        base.OnEnabled(); 
     }
 
     public override void OnDisabled() {
