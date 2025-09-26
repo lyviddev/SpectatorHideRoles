@@ -26,12 +26,13 @@
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
         <PlatformTarget>AnyCPU</PlatformTarget>
-        <DebugType>pdbonly</DebugType>
+        <DebugType>embedded</DebugType>
         <Optimize>true</Optimize>
         <OutputPath>bin\Release\</OutputPath>
         <DefineConstants>TRACE</DefineConstants>
         <ErrorReport>prompt</ErrorReport>
         <WarningLevel>4</WarningLevel>
+        <DebugSymbols>true</DebugSymbols>
     </PropertyGroup>
     <ItemGroup>
         <Reference Include="System"/>
@@ -52,6 +53,9 @@
         <Reference Include="Exiled.CustomRoles">
             <HintPath>$(SCPSL_References)\Exiled\EXILED\Plugins\Exiled.CustomRoles.dll</HintPath>
         </Reference>
+        <Reference Include="Exiled.Loader">
+            <HintPath>$(SCPSL_References)\Exiled\SCP Secret Laboratory/LabAPI/plugins/global/Exiled.Loader.dll</HintPath>
+        </Reference>
         <Reference Include="Assembly-CSharp-Firstpass">
             <HintPath>$(SCPSL_References)\LabAPI\Assembly-CSharp-firstpass.dll</HintPath>
         </Reference>
@@ -61,8 +65,15 @@
         <Reference Include="Mirror">
             <HintPath>$(SCPSL_References)\LabAPI\Mirror.dll</HintPath>
         </Reference>
+        <Reference Include="CommandSystem">
+            <HintPath>$(SCPSL_References)\LabAPI\CommandSystem.Core.dll</HintPath>
+        </Reference>
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="Commands\HideCustomRole.cs" />
+        <Compile Include="Commands\HideRole.cs" />
+        <Compile Include="Commands\ShowCustomRole.cs" />
+        <Compile Include="Commands\ShowRole.cs" />
         <Compile Include="config.cs" />
         <Compile Include="EventHandlers\ChangingRole.cs" />
         <Compile Include="Plugin.cs" />

@@ -1,4 +1,5 @@
-﻿using Exiled.API.Features;
+﻿using System;
+using Exiled.API.Features;
 using Exiled.CustomRoles.API;
 using Exiled.Events.EventArgs.Player;
 using MEC;
@@ -22,10 +23,12 @@ public static class ChangingRole {
                         break;
                     }
             }
-            catch {
-                Log.Debug("This caused an error! Please contact the developer in the EXILED Discord Server!");
-                Log.Debug("Error Location: RoleCheck");
-                Log.Debug("Possible Issue: Config.HideRole is left as 'hide_roles: '");
+            catch (Exception fuck_this_ex) {
+                Log.Debug(
+                    $"Error in CheckRoles: {fuck_this_ex.Message}\n\n" +
+                    $"StackTrace: {fuck_this_ex.StackTrace}\n" +
+                    $"Inner: {fuck_this_ex.InnerException}\n" +
+                    $"Source: {fuck_this_ex.Source}");
             }
             
             // ----------
@@ -55,10 +58,12 @@ public static class ChangingRole {
                             break;
                     }
                 }
-            } catch {
-                Log.Debug("This caused an error! Please contact the developer in the EXILED Discord Server!");
-                Log.Debug("Error Location: CustomRoleCheck");
-                Log.Debug("Possible Issue: Config.HideCustomRole is left as 'hide_custom_roles: '");
+            } catch (Exception fuck_this_ex) {
+                Log.Debug(
+                    $"Error in CheckCustomRoles: {fuck_this_ex.Message}\n\n" +
+                    $"StackTrace: {fuck_this_ex.StackTrace}\n" +
+                    $"Inner: {fuck_this_ex.InnerException}\n" +
+                    $"Source: {fuck_this_ex.Source}");
             }
             
             Log.Debug($"ShowSpectate: {showSpectate}");
