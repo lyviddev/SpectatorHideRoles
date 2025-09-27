@@ -7,6 +7,13 @@
 List of Roles: https://exmod-team.github.io/EXILED/articles/SCPSLRessources/NW_Documentation.html#roletype-team-side-and-leadingteam
 
 
+**Commands:**
+hideroles [RoleTypeId]: Will hide the roles for every match
+showroles [RoleTypeId]: Will show the roles for every match
+hidecustomroles [CustomRoleId]: Will hide the custom roles for every match
+showcustomroles [CustomRoleId]: Will show the custom roles for every match
+
+
 ## Note:
 My first plugin for SCP SL! :D
 
