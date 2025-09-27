@@ -7,7 +7,7 @@
 
 List of Roles: https://exmod-team.github.io/EXILED/articles/SCPSLRessources/NW_Documentation.html#roletype-team-side-and-leadingteam
 -----
-**Commands:**
+## Commands:
 
 hideroles [RoleTypeId]: Will hide the roles for every match
 
