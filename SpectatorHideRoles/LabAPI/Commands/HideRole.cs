@@ -5,6 +5,7 @@ using PlayerRoles;
 namespace SpectatorHideRoles.Commands;
 
 [CommandHandler(typeof(RemoteAdminCommandHandler))]
+[CommandHandler(typeof(GameConsoleCommandHandler))]
 internal class HideRole : ICommand {
     public string Command { get; set; } = "hideroles";
     public string Description { get; set; } = "Will hide the roles for every match";
