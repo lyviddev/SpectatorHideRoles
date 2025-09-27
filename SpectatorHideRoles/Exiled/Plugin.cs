@@ -1,12 +1,9 @@
 using System;
 using System.Collections.Generic;
-using Exiled.CustomRoles;
-using Exiled.Loader;
-
-namespace SpectatorHideRoles;
 using Exiled.API.Features;
 using player = Exiled.Events.Handlers.Player;
-using customRoles = Exiled.CustomRoles.Events;
+
+namespace SpectatorHideRoles;
 
 public class Plugin : Plugin<Config> {
     public override string Name => "SpectatorHideRolesExiled";

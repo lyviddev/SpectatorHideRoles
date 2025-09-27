@@ -70,8 +70,13 @@
         <Reference Include="NorthwoodLib">
             <HintPath>$(SCPSL_References)\LabAPI\NorthwoodLib.dll</HintPath>
         </Reference>
+        <Reference Include="CommandSystem">
+            <HintPath>$(SCPSL_References)\LabAPI\CommandSystem.Core.dll</HintPath>
+        </Reference>
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="Commands\HideRole.cs" />
+        <Compile Include="Commands\ShowRole.cs" />
         <Compile Include="config.cs" />
         <Compile Include="EventsHandler.cs" />
         <Compile Include="Plugin.cs" />

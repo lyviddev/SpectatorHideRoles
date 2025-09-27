@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using Exiled.API.Interfaces;
-using Exiled.CustomRoles.API.Features;
 using PlayerRoles;
 
 namespace SpectatorHideRoles;
