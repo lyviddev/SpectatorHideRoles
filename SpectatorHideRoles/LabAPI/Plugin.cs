@@ -13,7 +13,7 @@ public class Plugin : Plugin<config> {
     public override string Name { get;  } = "SpectatorHideRolesExiled";
     public override string Author { get; } = "Lyvid_Dev";
     public override string Description { get; } = "Will hide the SCP roles and Tutorial roles from being able to be viewed by Spectators";
-    public override Version Version { get; } = new (1, 0, 0);
+    public override Version Version { get; } = new (1, 2, 0);
     public override Version RequiredApiVersion { get; } = new(LabApiProperties.CompiledVersion);
     public override LoadPriority Priority { get; } = LoadPriority.Low;
 
