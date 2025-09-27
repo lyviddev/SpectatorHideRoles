@@ -26,5 +26,6 @@ public class Plugin : Plugin<config> {
 
     public override void Disable() {
         Singleton = null!;
+        CustomHandlersManager.UnregisterEventsHandler(Events);
     }
 }
