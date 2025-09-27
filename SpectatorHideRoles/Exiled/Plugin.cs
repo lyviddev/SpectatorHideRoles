@@ -6,7 +6,7 @@ using player = Exiled.Events.Handlers.Player;
 namespace SpectatorHideRoles;
 
 public class Plugin : Plugin<Config> {
-    public override string Name => "SpectatorHideRolesExiled";
+    public override string Name => "SpectatorHideRoles";
     public override string Author => "Lyvid_Dev";
     public override Version RequiredExiledVersion => new(9, 9, 2);
     public override Version Version => new(1, 2, 0);
